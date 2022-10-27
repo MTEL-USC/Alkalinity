@@ -93,7 +93,7 @@ set(gcf,'Renderer','opengl','color', 'w','PaperUnits','centimeters','PaperSize',
 % TA0_obs
 subplot('position', [0.05, 0.7, 0.16, 0.2])
 h=yzplot(obs_0ATL, opt2) ; hold on
-cmocean('deep');
+cmocean('-deep')
 set(gca,'FontSize',20,'CLim',[2200 2400],'xdir','reverse');
 text(85,-5500,'ATL','FontSize',19);
 ylabel('Depth (km)');

@@ -69,7 +69,7 @@ addpath cmocean
 % Model 1
 subplot('position', [0.1, 0.76, 0.23, 0.2])
 h=yzplot(ATL1, opt) ;
-cmocean('deep');
+cmocean('-deep')
 set(gca,'xdir','reverse');
 text(85,-5500,'ATL','FontSize',16);
 set(gca,'FontSize',16,'CLim',[0 0.6])
@@ -77,21 +77,21 @@ ylabel('Depth (km)');
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
-contour(ao.lat,-ao.depth,OAATL,[1 1],'k--','LineWidth',2); hold on
-contour(ao.lat,-ao.depth,OCATL,[1 1],'k','LineWidth',2);
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position',[0.33, 0.76, 0.27, 0.2])
 yzplot(PAC1, opt) ;
-colorbar; cmocean('deep');
+colorbar; cmocean('-deep')
 text(65,-5500,'PAC','FontSize',16);
 set(gca,'FontSize',16,'CLim',[0 0.6]);set(gca,'box','off')
-contour(ao.lat,-ao.depth,OAPAC,[1 1],'k--','LineWidth',2); hold on
-contour(ao.lat,-ao.depth,OCPAC,[1 1],'k','LineWidth',2);
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % Model 2
 subplot('position', [0.1, 0.52, 0.23, 0.2])
 h=yzplot(ATL2, opt) ;
-cmocean('deep');
+cmocean('-deep')
 set(gca,'xdir','reverse');
 text(85,-5500,'ATL','FontSize',16);
 set(gca,'FontSize',16,'CLim',[0 0.6])
@@ -99,21 +99,21 @@ ylabel('Depth (km)');
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
-contour(ao.lat,-ao.depth,OAATL,[1 1],'k--','LineWidth',2); hold on
-contour(ao.lat,-ao.depth,OCATL,[1 1],'k','LineWidth',2);
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position',[0.33, 0.52, 0.27, 0.2])
 yzplot(PAC2, opt) ;
-colorbar; cmocean('deep');
+colorbar; cmocean('-deep')
 text(65,-5500,'PAC','FontSize',16);
 set(gca,'FontSize',16,'CLim',[0 0.6]);set(gca,'box','off')
-contour(ao.lat,-ao.depth,OAPAC,[1 1],'k--','LineWidth',2); hold on
-contour(ao.lat,-ao.depth,OCPAC,[1 1],'k','LineWidth',2);
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % Model 3
 subplot('position', [0.1, 0.28, 0.23, 0.2])
 h=yzplot(ATL3, opt) ;
-cmocean('deep');
+cmocean('-deep')
 set(gca,'xdir','reverse');
 text(85,-5500,'ATL','FontSize',16);
 set(gca,'FontSize',16,'CLim',[0 0.6])
@@ -121,21 +121,21 @@ ylabel('Depth (km)');
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off');
-contour(ao.lat,-ao.depth,OAATL,[1 1],'k--','LineWidth',2); hold on
-contour(ao.lat,-ao.depth,OCATL,[1 1],'k','LineWidth',2);
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position',[0.33, 0.28, 0.27, 0.2])
 yzplot(PAC3, opt) ;
-colorbar; cmocean('deep');
+colorbar; cmocean('-deep')
 text(65,-5500,'PAC','FontSize',16);
 set(gca,'FontSize',16,'CLim',[0 0.6]);set(gca,'box','off')
-contour(ao.lat,-ao.depth,OAPAC,[1 1],'k--','LineWidth',2); hold on
-contour(ao.lat,-ao.depth,OCPAC,[1 1],'k','LineWidth',2);
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % Model 4
 subplot('position', [0.1, 0.04, 0.23, 0.2])
 h=yzplot(ATL4, opt) ;
-cmocean('deep');
+cmocean('-deep')
 set(gca,'xdir','reverse');
 text(85,-5500,'ATL','FontSize',16);
 set(gca,'FontSize',16,'CLim',[0 0.6])
@@ -143,16 +143,16 @@ ylabel('Depth (km)');
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
-contour(ao.lat,-ao.depth,OAATL,[1 1],'k--','LineWidth',2); hold on
-contour(ao.lat,-ao.depth,OCATL,[1 1],'k','LineWidth',2);
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position',[0.33, 0.04, 0.27, 0.2])
 yzplot(PAC4, opt) ;
-colorbar; cmocean('deep');
+colorbar; cmocean('-deep')
 text(65,-5500,'PAC','FontSize',16);
 set(gca,'FontSize',16,'CLim',[0 0.6]);set(gca,'box','off')
-contour(ao.lat,-ao.depth,OAPAC,[1 1],'k--','LineWidth',2); hold on
-contour(ao.lat,-ao.depth,OCPAC,[1 1],'k','LineWidth',2);
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 %% vertical profiles
 % Unit from umol/kg/y to mol/m/y

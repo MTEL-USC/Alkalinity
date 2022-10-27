@@ -85,7 +85,7 @@ set(gcf,'Renderer','opengl','color', 'w','PaperUnits','centimeters','PaperSize',
 % TA0_obs
 subplot('position', [0.1, 0.84, 0.15, 0.15])
 h=yzplot(obs_0ATL, opt2) ; hold on
-cmocean('deep');
+cmocean('-deep');
 set(gca,'FontSize',18,'CLim',[2200 2400],'xdir','reverse');
 text(85,-5500,'ATL','FontSize',18);
 ylabel('Depth (km)');
@@ -95,14 +95,14 @@ set(gca,'box','off')
 
 subplot('position',[0.25, 0.84, 0.19, 0.15])
 yzplot(obs_0PAC, opt2) ;
-colorbar; cmocean('deep')
+colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[2200 2400]);set(gca,'box','off')
 
 % TA*_obs
 subplot('position', [0.6, 0.84, 0.15, 0.15])
 yzplot(obs_sATL, opt) ;
-cmocean('deep')
+cmocean('-deep');
 set(gca,'xdir','reverse');
 set(gca,'FontSize',18,'CLim',[-50 200])
 ylabel('Depth (km)');
@@ -113,14 +113,14 @@ set(gca,'box','off')
 
 subplot('position', [0.75, 0.84, 0.19, 0.15])
 yzplot(obs_sPAC, opt) ;
-colorbar; cmocean('deep')
+colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[-50 200]);set(gca,'box','off')
 
 % TA0 M1
 subplot('position', [0.1, 0.64, 0.15, 0.15])
 yzplot(ATL01, opt2) ;
-cmocean('deep')
+cmocean('-deep');
 set(gca,'xdir','reverse');
 set(gca,'FontSize',18,'CLim',[2200 2400])
 ylabel('Depth (km)');
@@ -131,14 +131,14 @@ set(gca,'box','off')
 
 subplot('position', [0.25, 0.64, 0.19, 0.15])
 yzplot(PAC01, opt2) ;
-colorbar;cmocean('deep')
+colorbar;cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[2200 2400]);set(gca,'box','off')
 
 % TA* M1
 subplot('position', [0.6, 0.64, 0.15, 0.15])
 yzplot(ATLs1, opt) ;
-cmocean('deep')
+cmocean('-deep');
 set(gca,'xdir','reverse');
 set(gca,'FontSize',18,'CLim',[-50 200])
 ylabel('Depth (km)');
@@ -149,14 +149,14 @@ set(gca,'box','off')
 
 subplot('position', [0.75, 0.64, 0.19, 0.15])
 yzplot(PACs1, opt) ;
-colorbar; cmocean('deep')
+colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[-50 200]);set(gca,'box','off')
 
 % TA0 M2
 subplot('position', [0.1, 0.44, 0.15, 0.15])
 yzplot(ATL02, opt2) ;
-cmocean('deep')
+cmocean('-deep');
 set(gca,'xdir','reverse');
 set(gca,'FontSize',18,'CLim',[2200 2400])
 ylabel('Depth (km)');
@@ -167,14 +167,14 @@ set(gca,'box','off')
 
 subplot('position', [0.25, 0.44, 0.19, 0.15])
 yzplot(PAC02, opt2) ;
-colorbar;cmocean('deep')
+colorbar;cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[2200 2400]);set(gca,'box','off')
 
 % TA* M2
 subplot('position', [0.6, 0.44, 0.15, 0.15])
 yzplot(ATLs2, opt) ;
-cmocean('deep')
+cmocean('-deep');
 set(gca,'xdir','reverse');
 set(gca,'FontSize',18,'CLim',[-50 200])
 ylabel('Depth (km)');
@@ -185,14 +185,14 @@ set(gca,'box','off')
 
 subplot('position', [0.75, 0.44, 0.19, 0.15])
 yzplot(PACs2, opt) ;
-colorbar; cmocean('deep')
+colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[-50 200]);set(gca,'box','off')
 
 % TA0 M3
 subplot('position', [0.1, 0.24, 0.15, 0.15])
 yzplot(ATL03, opt2) ;
-cmocean('deep')
+cmocean('-deep');
 set(gca,'xdir','reverse');
 set(gca,'FontSize',18,'CLim',[2200 2400])
 ylabel('Depth (km)');
@@ -203,14 +203,14 @@ set(gca,'box','off')
 
 subplot('position', [0.25, 0.24, 0.19, 0.15])
 yzplot(PAC03, opt2) ;
-colorbar;cmocean('deep')
+colorbar;cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[2200 2400]);set(gca,'box','off')
 
 % TA* M3
 subplot('position', [0.6, 0.24, 0.15, 0.15])
 yzplot(ATLs3, opt) ;
-cmocean('deep')
+cmocean('-deep');
 set(gca,'xdir','reverse');
 set(gca,'FontSize',18,'CLim',[-50 200])
 ylabel('Depth (km)');
@@ -221,14 +221,14 @@ set(gca,'box','off')
 
 subplot('position', [0.75, 0.24, 0.19, 0.15])
 yzplot(PACs3, opt) ;
-colorbar; cmocean('deep')
+colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[-50 200]);set(gca,'box','off')
 
 % TA0 M4
 subplot('position', [0.1, 0.04, 0.15, 0.15])
 yzplot(ATL04, opt2) ;
-cmocean('deep')
+cmocean('-deep');
 set(gca,'xdir','reverse');
 set(gca,'FontSize',18,'CLim',[2200 2400])
 ylabel('Depth (km)');
@@ -239,14 +239,14 @@ set(gca,'box','off')
 
 subplot('position', [0.25, 0.04, 0.19, 0.15])
 yzplot(PAC04, opt2) ;
-colorbar;cmocean('deep')
+colorbar;cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[2200 2400]);set(gca,'box','off')
 
 % TA* M4
 subplot('position', [0.6, 0.04, 0.15, 0.15])
 yzplot(ATLs4, opt) ;
-cmocean('deep')
+cmocean('-deep');
 set(gca,'xdir','reverse');
 set(gca,'FontSize',18,'CLim',[-50 200])
 ylabel('Depth (km)');
@@ -257,8 +257,8 @@ set(gca,'box','off')
 
 subplot('position', [0.75, 0.04, 0.19, 0.15])
 yzplot(PACs4, opt) ;
-colorbar; cmocean('deep')
+colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[-50 200]);set(gca,'box','off')
 
-%pdfname=['/Users/hengdi/Desktop/untitled.pdf']; print('-dpdf','-r300',pdfname); open (pdfname)
+pdfname=['/Users/hengdi/Desktop/untitled.pdf']; print('-dpdf','-r300',pdfname); open (pdfname)

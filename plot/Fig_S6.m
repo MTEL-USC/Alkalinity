@@ -106,7 +106,7 @@ set(gcf,'Renderer','opengl','color', 'w','PaperUnits','centimeters','PaperSize',
 
 % Obs
 subplot('position', [0.1, 0.8, 0.08, 0.18])
-yzplot(obs_0ATL, opt2); cmocean('deep')
+yzplot(obs_0ATL, opt2); cmocean('-deep');
 set(gca,'FontSize',18,'CLim',[2200 2400],'xdir','reverse');
 ylabel('Depth (km)'); xlim([-89 89]);
 text(82,-5500,'ATL','FontSize',18);
@@ -116,14 +116,14 @@ set(gca,'box','off')
 
 subplot('position', [0.18, 0.8, 0.1, 0.18])
 yzplot(obs_0PAC, opt2) ;
-cmocean('deep')
+cmocean('-deep');
 text(50,-5500,'PAC','FontSize',18); xlim([-89 89]);
 set(gca,'FontSize',18,'CLim',[2200 2400])
 set(gca,'box','off')
 colorbar
 
 subplot('position', [0.54, 0.8, 0.08, 0.18])
-yzplot(obs_sATL, opt); cmocean('deep')
+yzplot(obs_sATL, opt); cmocean('-deep');
 set(gca,'FontSize',18,'CLim',[-50 150],'xdir','reverse');
 ylabel('Depth (km)'); xlim([-89 89]);
 text(82,-5500,'ATL','FontSize',18);
@@ -133,7 +133,7 @@ set(gca,'box','off')
 
 subplot('position', [0.62, 0.8, 0.1, 0.18])
 yzplot(obs_sPAC, opt) ;
-cmocean('deep'); xlim([-89 89]);
+cmocean('-deep');; xlim([-89 89]);
 text(50,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[-50 150])
 set(gca,'box','off')
@@ -142,7 +142,7 @@ colorbar
 %% Low
 % TA0
 subplot('position', [0.1, 0.55, 0.08, 0.18])
-yzplot(A01, opt2); cmocean('deep')
+yzplot(A01, opt2); cmocean('-deep');
 set(gca,'FontSize',18,'CLim',[2200 2400],'xdir','reverse');
 ylabel('Depth (km)'); xlim([-89 89]);
 text(82,-5500,'ATL','FontSize',18);
@@ -152,7 +152,7 @@ set(gca,'box','off')
 
 subplot('position', [0.18, 0.55, 0.1, 0.18])
 yzplot(P01, opt2) ;
-cmocean('deep')
+cmocean('-deep');
 text(50,-5500,'PAC','FontSize',18); xlim([-89 89]);
 set(gca,'FontSize',18,'CLim',[2200 2400])
 set(gca,'box','off')
@@ -177,7 +177,7 @@ colorbar
 
 % TA*
 subplot('position', [0.54, 0.55, 0.08, 0.18])
-yzplot(As1, opt); cmocean('deep')
+yzplot(As1, opt); cmocean('-deep');
 set(gca,'FontSize',18,'CLim',[-50 150],'xdir','reverse');
 ylabel('Depth (km)'); xlim([-89 89]);
 text(82,-5500,'ATL','FontSize',18);
@@ -187,7 +187,7 @@ set(gca,'box','off')
 
 subplot('position', [0.62, 0.55, 0.1, 0.18])
 yzplot(Ps1, opt) ;
-cmocean('deep')
+cmocean('-deep');
 text(50,-5500,'PAC','FontSize',18); xlim([-89 89]);
 set(gca,'FontSize',18,'CLim',[-50 150])
 set(gca,'box','off')
@@ -213,7 +213,7 @@ colorbar
 %% Mid
 % TA0
 subplot('position', [0.1, 0.3, 0.08, 0.18])
-yzplot(A02, opt2); cmocean('deep')
+yzplot(A02, opt2); cmocean('-deep');
 set(gca,'FontSize',18,'CLim',[2200 2400],'xdir','reverse');
 ylabel('Depth (km)'); xlim([-89 89]);
 text(82,-5500,'ATL','FontSize',18);
@@ -223,7 +223,7 @@ set(gca,'box','off')
 
 subplot('position', [0.18, 0.3, 0.1, 0.18])
 yzplot(P02, opt2) ;
-cmocean('deep')
+cmocean('-deep');
 text(50,-5500,'PAC','FontSize',18); xlim([-89 89]);
 set(gca,'FontSize',18,'CLim',[2200 2400])
 set(gca,'box','off')
@@ -248,7 +248,7 @@ colorbar
 
 % TA*
 subplot('position', [0.54, 0.3, 0.08, 0.18])
-yzplot(As2, opt); cmocean('deep')
+yzplot(As2, opt); cmocean('-deep');
 set(gca,'FontSize',18,'CLim',[-50 150],'xdir','reverse');
 ylabel('Depth (km)'); xlim([-89 89]);
 text(82,-5500,'ATL','FontSize',18);
@@ -258,7 +258,7 @@ set(gca,'box','off')
 
 subplot('position', [0.62, 0.3, 0.1, 0.18])
 yzplot(Ps2, opt) ;
-cmocean('deep')
+cmocean('-deep');
 text(50,-5500,'PAC','FontSize',18); xlim([-89 89]);
 set(gca,'FontSize',18,'CLim',[-50 150])
 set(gca,'box','off')
@@ -284,7 +284,7 @@ colorbar
 %% high
 % TA0
 subplot('position', [0.1, 0.05, 0.08, 0.18])
-yzplot(A03, opt2); cmocean('deep')
+yzplot(A03, opt2); cmocean('-deep');
 set(gca,'FontSize',18,'CLim',[2200 2400],'xdir','reverse');
 ylabel('Depth (km)'); xlim([-89 89]);
 text(82,-5500,'ATL','FontSize',18);
@@ -294,7 +294,7 @@ set(gca,'box','off')
 
 subplot('position', [0.18, 0.05, 0.1, 0.18])
 yzplot(P03, opt2) ;
-cmocean('deep')
+cmocean('-deep');
 text(50,-5500,'PAC','FontSize',18); xlim([-89 89]);
 set(gca,'FontSize',18,'CLim',[2200 2400])
 set(gca,'box','off')
@@ -319,7 +319,7 @@ colorbar
 
 % TA*
 subplot('position', [0.54, 0.05, 0.08, 0.18])
-yzplot(As3, opt); cmocean('deep')
+yzplot(As3, opt); cmocean('-deep');
 set(gca,'FontSize',18,'CLim',[-50 150],'xdir','reverse');
 ylabel('Depth (km)'); xlim([-89 89]);
 text(82,-5500,'ATL','FontSize',18);
@@ -329,7 +329,7 @@ set(gca,'box','off')
 
 subplot('position', [0.62, 0.05, 0.1, 0.18])
 yzplot(Ps3, opt) ;
-cmocean('deep')
+cmocean('-deep');
 text(50,-5500,'PAC','FontSize',18); xlim([-89 89]);
 set(gca,'FontSize',18,'CLim',[-50 150])
 set(gca,'box','off')
