@@ -7,6 +7,14 @@ load ../data/ao
 load ../data/GLODAP/Sal
 addpath cmocean
 
+load ../data/GLODAP/OmegaC
+load ../data/GLODAP/OmegaA
+OC = OmegaC; OA = OmegaA;
+OC(isnan(OmegaC))=0; OC(find(~ao.OCN)) = NaN; 
+OCATL = squeeze(OC(:,166,:))'; OCPAC = squeeze(OC(:,100,:))';
+OA(isnan(OmegaA))=0; OA(find(~ao.OCN)) = NaN;
+OAATL = squeeze(OA(:,166,:))'; OAPAC = squeeze(OA(:,100,:))';
+
 load ../data/Preformed/TAc_AO
 TA0_AO(isnan(TA0_AO))=0; TA0_AO(find(~ao.OCN)) = NaN;
 TAs_AO(isnan(TAs_AO))=0; TAs_AO(find(~ao.OCN)) = NaN;
@@ -92,12 +100,16 @@ ylabel('Depth (km)');
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position',[0.25, 0.84, 0.19, 0.15])
 yzplot(obs_0PAC, opt2) ;
 colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[2200 2400]);set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % TA*_obs
 subplot('position', [0.6, 0.84, 0.15, 0.15])
@@ -110,12 +122,16 @@ text(85,-5500,'ATL','FontSize',18);
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position', [0.75, 0.84, 0.19, 0.15])
 yzplot(obs_sPAC, opt) ;
 colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[-50 200]);set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % TA0 M1
 subplot('position', [0.1, 0.64, 0.15, 0.15])
@@ -128,12 +144,16 @@ text(85,-5500,'ATL','FontSize',18);
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position', [0.25, 0.64, 0.19, 0.15])
 yzplot(PAC01, opt2) ;
 colorbar;cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[2200 2400]);set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % TA* M1
 subplot('position', [0.6, 0.64, 0.15, 0.15])
@@ -146,12 +166,16 @@ text(85,-5500,'ATL','FontSize',18);
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position', [0.75, 0.64, 0.19, 0.15])
 yzplot(PACs1, opt) ;
 colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[-50 200]);set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % TA0 M2
 subplot('position', [0.1, 0.44, 0.15, 0.15])
@@ -164,12 +188,16 @@ text(85,-5500,'ATL','FontSize',18);
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position', [0.25, 0.44, 0.19, 0.15])
 yzplot(PAC02, opt2) ;
 colorbar;cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[2200 2400]);set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % TA* M2
 subplot('position', [0.6, 0.44, 0.15, 0.15])
@@ -182,12 +210,16 @@ text(85,-5500,'ATL','FontSize',18);
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position', [0.75, 0.44, 0.19, 0.15])
 yzplot(PACs2, opt) ;
 colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[-50 200]);set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % TA0 M3
 subplot('position', [0.1, 0.24, 0.15, 0.15])
@@ -200,12 +232,16 @@ text(85,-5500,'ATL','FontSize',18);
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position', [0.25, 0.24, 0.19, 0.15])
 yzplot(PAC03, opt2) ;
 colorbar;cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[2200 2400]);set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % TA* M3
 subplot('position', [0.6, 0.24, 0.15, 0.15])
@@ -218,12 +254,16 @@ text(85,-5500,'ATL','FontSize',18);
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position', [0.75, 0.24, 0.19, 0.15])
 yzplot(PACs3, opt) ;
 colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[-50 200]);set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % TA0 M4
 subplot('position', [0.1, 0.04, 0.15, 0.15])
@@ -236,12 +276,16 @@ text(85,-5500,'ATL','FontSize',18);
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position', [0.25, 0.04, 0.19, 0.15])
 yzplot(PAC04, opt2) ;
 colorbar;cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[2200 2400]);set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 % TA* M4
 subplot('position', [0.6, 0.04, 0.15, 0.15])
@@ -254,11 +298,15 @@ text(85,-5500,'ATL','FontSize',18);
 yticks([-6000 -5000 -4000 -3000 -2000 -1000 0]) ;
 yticklabels({'6','5','4','3','2','1','0'}) ;
 set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAATL,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCATL,[1 1],'w','LineWidth',2);
 
 subplot('position', [0.75, 0.04, 0.19, 0.15])
 yzplot(PACs4, opt) ;
 colorbar; cmocean('-deep');
 text(52,-5500,'PAC','FontSize',18);
 set(gca,'FontSize',18,'CLim',[-50 200]);set(gca,'box','off')
+contour(ao.lat,-ao.depth,OAPAC,[1 1],'w--','LineWidth',2); hold on
+contour(ao.lat,-ao.depth,OCPAC,[1 1],'w','LineWidth',2);
 
 pdfname=['/Users/hengdi/Desktop/untitled.pdf']; print('-dpdf','-r300',pdfname); open (pdfname)
